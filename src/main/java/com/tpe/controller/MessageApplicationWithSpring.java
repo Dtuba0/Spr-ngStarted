@@ -89,7 +89,7 @@ public class MessageApplicationWithSpring {
         //prototype olarak degistirebiliriz : bu ise classtan her cagrildiginda farkli bir obje uretmeyi saglar!!!
         //Beanlerin imhasından Spring sorumlu degildir
 
-
+//ytdgtxgfxgrsgrgfxgfcgf
 
 
 
