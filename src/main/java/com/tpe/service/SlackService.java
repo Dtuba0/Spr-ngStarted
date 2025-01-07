@@ -2,11 +2,13 @@ package com.tpe.service;
 
 import com.tpe.domain.Message;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import java.util.Properties;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -46,4 +48,17 @@ public class SlackService implements MessageService{
     }
 
 
+    //--------------------------------------properties------------------------
+    @Value("${eposta}")
+    private String email;
+    @Value("${phone}")
+    private String phone ;
+    @Value("$")
+
+    public void printContact(){
+        System.out.println("E-mail : "+this.email);
+        System.out.println("Phone : "+this.phone);
+    }
+    @Autowired
+    private Properties properties;
 }

@@ -76,6 +76,16 @@ public class MessageApplicationWithSpring {
             System.out.println(service6);
             System.out.println(service7);
         }
+
+        SlackService service8 = context .getBean(SlackService.class);
+        service8.printContact();
+
+        //prototype olan beanlerden bırını yok etme işlemı
+        context.getBeanFactory().destroyBean(service6);
+
+
+
+
         context.close();
 
 
